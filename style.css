@@ -69,15 +69,21 @@ label{
 button{
 	position: absolute;
 	bottom: 0;
-	right: 0;
-
+	right: 22%;
+	border: none;
 	margin: 2em;
 	text-align: center;
+	box-shadow: inset 0 0 20px #296F01;
 
-	background-color: orange;
+	background-color: #C9FD4E;
 	border-radius: 20px;
 	padding: 1em;
 	font-family: 'Apoc';
+}
+
+button:hover{
+	background-color: orange;
+	box-shadow: inset 0 0 10px black;
 }
 
 

@@ -7,7 +7,7 @@ let gradient;
 let gradient2;
 
 let eyes;
-let vScale = 6;
+let vScale;
 let startX = 0;
 let startY = 0;
 let green = "#C9FD4E";
@@ -41,13 +41,13 @@ function setup(){
 	textSize(25);
 	enterText();
 
-	gradient = createRadialGradient(100, 200, width/2, height/2);
-	gradient.colors(0.5, "white",0.75, "grey",1, "black");
+	gradient = createRadialGradient(80, 200, width/2, height/2);
+	gradient.colors(0.25, "black",0.5, "white",0.75, "grey",1, "black");
 	// gradient = createConicGradient(20, width/2, height/2.5);
 	// gradient.colors(0, "#D08BFE", 0.5, "#019267", 0.75, green, 1, "#7302E3");
 
 
-	// vScale = workHours.value;
+    vScale = 4;
 
 
     eyes = createCapture(VIDEO);
@@ -60,24 +60,22 @@ function setup(){
 }
 
 function saveSticker(){
-
 	saveCanvas('unioneyes', 'png');
 }
-function mousePressed (){
-	saveSticker();
 
-}
 
 
 function draw(){
 
-background("#707070");
+// background("#707070");
+
+let mY = constrain(mouseX);
 
 	// fill("#D08BFE");
 	fillGradient(gradient);
 	stroke(255);
 	strokeWeight(3);
-	ellipse(width/2, height/2, 600, 400);
+	ellipse(width/2, height/2, 670, 400);
 
 /* eyes video*/
 
